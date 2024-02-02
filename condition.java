@@ -12,6 +12,21 @@ class condition {
 			System.out.println("not you bro stop here");
 		}
 
+		for (int i = 0; i <= val; i++) {
+			if (i == 2) {
+				System.out.println("first assing");
+			}
+			// if (i != 1) {
+			// System.out.println("seccond");
+			// }
+			if (i % 2 == 0) {
+				System.out.println("even");
+			}
+			if (i % 2 == 0 && i % 10 == 0) {
+				System.out.println("testing and oprator");
+			}
+		}
+
 	}
 
 }
