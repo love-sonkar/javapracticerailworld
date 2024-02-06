@@ -25,6 +25,7 @@ public class Switch {
                 System.out.println("This is Default one you Enterd : " + val);
                 break;
         }
+        sc.close();
     }
 
 }

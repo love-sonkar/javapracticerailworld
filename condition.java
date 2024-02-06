@@ -26,6 +26,7 @@ class condition {
 				System.out.println("testing and oprator");
 			}
 		}
+		sc.close();
 
 	}
 

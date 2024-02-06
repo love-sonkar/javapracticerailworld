@@ -21,7 +21,7 @@ class Loops {
             System.out.print(z + " ");
             z++;
         } while (z <= val);
-
+        sc.close();
     }
 
 }
