@@ -1,5 +1,5 @@
 public class ExceptionHandling {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         ThrowMethods tm = new ThrowMethods();
         try {
             tm.checkAge(14);
