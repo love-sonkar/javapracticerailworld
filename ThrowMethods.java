@@ -1,4 +1,6 @@
+import java.io.File;
 import java.io.FileReader;
+import java.util.Scanner;
 
 public class ThrowMethods {
     void checkAge(int age) {
@@ -23,18 +25,26 @@ public class ThrowMethods {
     }
 
     void tryWithResourceMethod() {
-        try {
-            FileReader fr = new FileReader("test.text");
-
-            System.out.println("hi test");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        // try (FileReader fr = new FileReader("test.text")) {
-        // fr.read();
+        // try {
+        // FileReader fr = new FileReader("test.text");
+        // Scanner sc = new Scanner(fr);
+        // while (sc.hasNextLine()) {
+        // System.out.println(sc.nextLine());
+        // }
+        // sc.close();
         // } catch (Exception e) {
         // System.out.println(e.getMessage());
         // }
+
+        try (FileReader fr = new FileReader("test.text")) {
+            Scanner sc = new Scanner(fr);
+            while (sc.hasNextLine()) {
+                System.out.println(sc.nextLine());
+            }
+            sc.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }
